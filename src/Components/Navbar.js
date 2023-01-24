@@ -25,10 +25,10 @@ const Navbar = () => {
       className="HAMBURGER-ICON space-y-2 "
       onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
     >
-      
-      <span className="block h-0.5 w-8 animate-pulse bg-gray-600 "></span>
-      <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-      <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+         <span className="block h-0.5 w-8 animate-pulse bg-gray-600 "></span>
+         <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+         <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+     
     </div>
 
     <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> 
@@ -36,18 +36,20 @@ const Navbar = () => {
         className="CROSS-ICON absolute top-0 right-0 px-8 py-8"
         onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
       >
-        <svg
-          className="h-8 w-8 text-gray-600"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        > 
-            <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg> 
+       
+             <svg
+             className="h-8 w-8 text-gray-600"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             strokeWidth="2"
+             strokeLinecap="round"
+             strokeLinejoin="round"
+           > 
+               <line x1="18" y1="6" x2="6" y2="18" />
+             <line x1="6" y1="6" x2="18" y2="18" />
+           </svg> 
+     
       </div>
       <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
       <Link to={"/"} style={{textDecoration:'none' , mb:'20px' ,fontSize:'25px'}} class='text-white'>Home</Link>
@@ -83,13 +85,14 @@ const Navbar = () => {
       }
       .showMenuNav {
         display: block;
-        border-radius:20px;
-        width: 200px;
+        // border-radius:20px;
+        width: 100%;
         position:absolute;
         height: 50%;
-        top: 0;
+        top: 80px;
         right :0;
-        background:linear-gradient(to right, rgb(34, 197, 94), rgb(21, 128, 61));
+        background:#000720;
+        //linear-gradient(to right, rgb(34, 197, 94), rgb(21, 128, 61));
         z-index: 10;
         display: flex;
         flex-direction: column;
