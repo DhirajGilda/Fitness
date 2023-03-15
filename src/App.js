@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar'
 import Home from './pages/Home'
 import ExerciseDetail from "./pages/ExerciseDetail";
 import Footer from "./Components/Footer";
+
 function App() {
   return (
     <Box className="App" width={"400px"} sx={{ width: {xl:'1488px'}}} m='auto'>

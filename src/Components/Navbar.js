@@ -60,8 +60,8 @@ const closeicon = <div className="CROSS-ICON space-y-2 mr-2" onClick={() => setI
         <Stack direction="row" gap={'40px'} fontSize="24px" alignItems={'flex-end'} >
           <Link to={"/"} style={{textDecoration:'none' , borderBottom:'3px solid #FF0000', mb:'20px'}} class='text-white'>Home</Link>
           <a href='#exercise' style={{textDecoration:'none'}} class='text-white'>Exercise</a>
-          <a href='#blog' style={{textDecoration:'none'}} class='text-white'>Blog</a>
-          <a href='#blog' style={{textDecoration:'none'}} class='text-white'>About Us</a>
+          <a href='#meal' style={{textDecoration:'none'}} class='text-white'>Blog</a>
+          <a href='#AboutUS' style={{textDecoration:'none'}} class='text-white'>About Us</a>
           
         </Stack>
         <Stack direction={'row'} alignItems={'flex-end'}>
