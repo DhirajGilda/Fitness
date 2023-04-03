@@ -106,21 +106,21 @@ function App() {
       </div>
       <div className={` flex justify-center items-center   px-10 ${show ?"flex flex-col sm:flex-row justify-between items-center  px-10":""} `}>
         <div className="flex flex-col pr-10 ">
-          <div>
+          <div className="max-[600px]:ml-10">
             <TextareaAutosize
                   rowsMin={10}
                   placeholder="Enter a food"
                   value={ingredients}
                   onChange={(event) => setIngredients(event.target.value)}
-                  style={{ width:"600px", height: "300px", padding: "10px", fontSize: "16px" ,borderRadius:'10px' }}
-                  classname="textarea" 
+                  style={{width:"40vw",height: "300px", padding: "10px", fontSize: "16px" ,borderRadius:'10px'}}
+                  className="textarea" 
                   
                 />
 
             </div>
-            <div className='flex items-center justify-between p-10 px-[60px] '>
+            <div className='flex items-center justify-between p-10 px-[60px] max-[600px]:flex-col'>
               <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full " onClick={handleClickAnalyse} >Analyze</button>
-              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleClickNew} >New Reciep</button>
+              <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full max-[600px]:mt-3" onClick={handleClickNew} >New Recipe</button>
             </div>
             {
               table.length>0 && (
