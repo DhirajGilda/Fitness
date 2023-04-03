@@ -37,7 +37,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button type="submit">Log In</button>
+      <button className='rounded  bg-red-500' type="submit">Log In</button>
     </form>
   );
 };
