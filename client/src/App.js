@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import RecipeSearch from "./pages/RecipeSearch";
 import Login from "./pages/login";
 import Signup from "./pages/Signup"
+import LandingPage from "./pages/LandingPage"
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<LandingPage/>}/>
         {/* <Route path="/Exercise/:id" element={<ExerciseDetail/>}/> */}
         <Route path="/Meals" element={<RecipeSearch/>}/>
       </Routes>
