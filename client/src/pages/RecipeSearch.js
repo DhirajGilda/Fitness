@@ -99,8 +99,8 @@ function App() {
     handleToggleClick();
   }
   return (
-    <>
-      <div>
+    < >
+      <div >
         <p className="text-white flex justify-between items-center p-10 text-[20px] font-bold">Enter an ingredient list  for what you are cooking, like "1 cup rice, 10 oz chickpeas", etc.
             Enter each ingredient on a new line seperated by commas.</p>
       </div>
