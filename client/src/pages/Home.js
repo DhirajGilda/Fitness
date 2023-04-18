@@ -8,7 +8,7 @@ const Home = () => {
   const [bodyPart,setBodyPart]=useState('all');
   const[exercises,setExercises]=useState([]);
   return (
-    <Box>
+    <Box >
       <Homebanner/>
       {/* <SearchExercise 
         setExercises={setExercises}
