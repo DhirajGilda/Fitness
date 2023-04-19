@@ -4,11 +4,11 @@ import logo1 from '../assets/icons/name_logo.png'
 const Footer = () => {
   return (
     
-<footer class="bg-gray-900">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+<footer class="bg-gray-900 w-full">
+    <div class="w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
         <div class='flex flex-row justify-between items-center   ' >
-          <Link to={"/"}> <img src={logo1} alt="logo" style={{ width :"58px" ,height:'58px' ,margin :"0 0 0 10px",borderRadius:'10px'}}/></Link>
+          <Link to={"/"}> <img src={logo1} alt="logo"/></Link>
           <p className='text-green-500 font-bold text-5xl '>Fit</p>
           <p className='text-white font-bold text-5xl '>Next</p>
      
