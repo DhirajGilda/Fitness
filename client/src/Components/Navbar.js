@@ -20,13 +20,7 @@ import Login from '../pages/login'
 const Navbar = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('username');
-    setIsLoggedIn(false);
-  };
-  const name=user.username;
+  const fullName = `${user.firstName} ${user.lastName}`;
   console.log(user);
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with falsenp
   const hamburgerIcon = <div className="HAMBURGER-ICON space-y-2 mr-2  " onClick={() => setIsNavOpen((prev) => !prev)} >  
@@ -84,7 +78,7 @@ const closeicon = <div className="CROSS-ICON space-y-2 mr-2" onClick={() => setI
         </Stack>
         <Stack direction={'row'} alignItems={'flex-end'}>
         <Select
-              value={user}
+              value={fullName}
               sx={{
                backgroundColor:"green",
                borderRadius:'10px',
@@ -94,8 +88,8 @@ const closeicon = <div className="CROSS-ICON space-y-2 mr-2" onClick={() => setI
               }}
               input={<InputBase />}
             >
-              <MenuItem value={user}>
-                <Typography>{user}</Typography>
+              <MenuItem value={fullName}>
+                <Typography>{fullName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
             </Select>

@@ -8,9 +8,11 @@ import ExerciseDetail from "./pages/ExerciseDetail";
 import Footer from "./Components/Footer";
 import RecipeSearch from "./pages/RecipeSearch";
 import Login from "./pages/login";
+import Blog from "./pages/Blog/Blog"
 import Signup from "./pages/Signup"
-import LandingPage from "./pages/LandingPage"
+import FullBlog from "./pages/Blog/FullBlog";
 import { useSelector } from "react-redux";
+
 
 function App() {
   const isAuth =Boolean(useSelector((state)=>state.token));
@@ -25,6 +27,8 @@ function App() {
             <Route path="/" element={isAuth ? <Home/> : <Navigate to ="/login"/>}/>
             {/* <Route path="/Exercise/:id" element={isAuth ? <ExerciseDetail/> : <Navigate to="/login"/>}/> */}
             <Route path="/Meals" element={isAuth ? <RecipeSearch/> : <Navigate to="/login"/>}/>
+            <Route path="/Blogs" element={isAuth ? <Blog/> : <Navigate to="/login"/>}/>
+            <Route exact path="/blog/:id" element={isAuth ? <FullBlog/> : <Navigate to="/login"/>} />
           </Routes>
         </div>
         {isAuth && <Footer/>}  

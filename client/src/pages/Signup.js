@@ -3,19 +3,23 @@ import { useState } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 const Signup = () => {
-    const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/signup', {
-        username,
-        password,
+      const response = await axios.post('http://localhost:3001/auth/register', {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
       });
-      if (response.data.token) {
-        localStorage.setItem('token', response.data.token);
-      }
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data.user));
     } catch (error) {
       console.log(error);
     }
@@ -28,10 +32,26 @@ const Signup = () => {
               <h1 class="text-gray-200 text-center font-extrabold -mt-3 text-3xl">FitNext</h1>
               <div class="container py-5 max-w-md mx-auto">
               <form onSubmit={handleSubmit}>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Enter first name"
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Enter last name"
+                          value={lastName}
+                          onChange={(e) => setLastName(e.target.value)}
+                        />
+                      </div>
                       <div class="mb-4">
-                          <input placeholder="Username"
+                          <input placeholder="email"
                               class="shadow appearance-none  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                              type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                              type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
                       </div>
                       <div class="mb-6">
       
